@@ -1,0 +1,44 @@
+@import '../../../styles/color.scss';
+.x-header{
+    height: .5rem;
+    color: #fff;
+    z-index: 99995; //daiqueding
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $theme-primary;
+    .logo{
+        width: 2.3rem;
+        line-height: .5rem;
+        padding: 0 .15rem;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: $theme-primary-active;
+        float: left;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding: 0 .15rem;
+        line-height: .5rem;
+        margin-left: 2.3rem;
+        .control-menu{
+            cursor: pointer;
+            width: .14rem;
+            height: .02rem;
+            border-top: .02rem solid #fff;
+            border-bottom: .02rem solid #fff;
+            padding: .02rem 0;
+            background-clip:content-box;
+            background-color: #fff;
+        }
+    }
+    .ul-list{
+        padding: .18rem;
+        flex: 1;
+    }
+    .tool-item{
+        padding: .18rem;
+    }
+}

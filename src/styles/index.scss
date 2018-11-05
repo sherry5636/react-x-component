@@ -1,0 +1,11 @@
+/*字体图标使用font-awesome*/
+@import '../fonts/css/font-awesome.min.css';
+/*整体样式*/
+@import 'color';
+@import 'reset';
+// @import 'pmd';
+@import 'skin';
+/*单个页面样式*/
+@import 'demo';
+@import 'button';
+@import 'upload';

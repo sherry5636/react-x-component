@@ -1,0 +1,27 @@
+html {
+    font-size: 100px;
+    .x-app{
+        font-size: .14rem;
+        color: $theme-font;
+        display: flex;
+        flex-direction: row;
+        background-color: #f7faff;
+    }
+    
+    .x-wrapper{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        margin-top: .5rem;
+        .x-body{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .x-content{
+            flex: 1;
+            padding: .15rem;
+            overflow: scroll;
+        }
+    }
+}

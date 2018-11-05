@@ -1,0 +1,60 @@
+@import '../../../styles/color.scss';
+
+.x-radio{
+    display: flex;
+    font-size: 14px;
+    &.vertical{
+        flex-direction: column;
+        .x-option{
+            margin-bottom: .2rem;
+            margin-right: 0;
+        }
+        .x-option:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .x-option{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: .24rem;
+        &.dis-selected{
+            cursor: not-allowed;
+            .x-option-dot{
+                background-color: #F5F5F5;
+                border-color: #BBC1D3;
+            }
+        }  
+        .x-option-dot{
+            display: block;
+            width: .16rem;
+            height: .16rem;
+            border: 1px solid #BBC1D3;
+            border-radius: 100%;
+            margin-right: 6px;
+            box-sizing: border-box;
+        }
+        .x-option-label{
+            color: #1F2D3D;
+        }
+        &.active{
+            .x-option-dot{
+                border-color: $theme-primary;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -5px;
+                    margin-left: -5px;
+                    width: 0.1rem;
+                    height: 0.1rem;
+                    background-color: $theme-primary;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}

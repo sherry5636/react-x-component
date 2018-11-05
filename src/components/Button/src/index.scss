@@ -1,0 +1,143 @@
+@import '../../../styles/color.scss';
+
+$primary: #4B7EFE;
+$hover: #6C8CFF;
+$primary-disabled: #E3E6F0;
+
+$default: #B7BDD0;
+
+$warn-bg: #FF7A33;
+$warn-border: #FF7A33;
+
+.x-btn {
+    display: inline-block;
+    font-size: 14px;
+    background-color: #fff;
+    color: #6B7491;
+    border: 1px solid $default;
+    padding: 8px 20px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all .2s;
+    font-weight: 200;
+    white-space: nowrap;
+    line-height: 14px;
+    &:active,&:hover {
+        color: $hover;
+        border-color: $hover;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        border-color: $default;
+        color: $default;
+    }
+    .fa {
+        font-weight: 100;
+        margin-right: 5px;
+    }
+}
+
+.x-btn-primary {
+    background-color: $primary;
+    color: #fff;
+    border: 1px solid $primary;
+    &:active,&:hover {
+        background-color: $hover;
+        color: #fff;
+    }
+    &:disabled{
+        background-color: $primary-disabled;
+        border-color: $primary-disabled;
+        &:hover{
+            color: $default;
+        }
+    }
+}
+
+.x-btn-warning {
+    background-color: $warn-bg;
+    color: #fff;
+    border: 1px solid $warn-border;
+    &:active {
+        background-color: darken($warn-bg, 10%);
+    }
+}
+
+//反选择
+
+.x-btn-primary.x-btn-inverse {
+    border-color: $default;
+    background-color: #fff;
+    color: $primary;
+    &:active {
+        background-color: $primary;
+        color: #fff;
+        border: 1px solid $primary;
+    }
+}
+
+.x-btn-warning.x-btn-inverse {
+    background-color: #fff;
+    color: $warn-bg;
+    &:active {
+        background-color: $warn-bg;
+        color: #fff;
+        border: 1px solid $warn-border;
+    }
+}
+
+//尺寸
+.x-btn-sm {
+    padding: 7px 20px;
+    height: 28px;
+    line-height: 12px;
+    font-size: 12px;
+}
+
+.x-btn-xs {
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.x-btn-md {
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+.x-btn-lg {
+    padding: 9px 20px;
+    line-height: 16px;
+    font-size: 16px;
+}
+
+.x-btn-sg {
+    padding: 10px 70px;
+    line-height: 14px;
+    font-size: 14px;
+}
+
+//按钮组
+.x-btngroup {
+    position: relative;
+    display: inline-block;
+    .x-btn {
+        margin: 0 !important;
+        border-radius: 0;
+        margin-left: -1px !important;
+        &:first-child {
+            margin-left: 0 !important;
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+        }
+        &:last-child {
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+        &:active {
+            border-color: #D9D9D9;
+            background-color: #D9D9D9;
+            color: #595959;
+        }
+    }
+}

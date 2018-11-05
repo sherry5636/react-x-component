@@ -1,0 +1,22 @@
+.x-toggle {
+    position: relative;
+    display: inline-block;
+    &.show{
+        .x-toggle-box{
+            display: block;
+        }
+    }
+}
+
+.x-toggle-top{
+    cursor: pointer;
+}
+
+.x-toggle-box {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    margin-top: 1px;
+}

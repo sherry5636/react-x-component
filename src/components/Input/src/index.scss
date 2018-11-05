@@ -1,0 +1,34 @@
+@import '../../../styles/color.scss';
+
+.x-input {
+    display: block;
+    width: 100%;
+    padding: .1rem;
+    font-size: .14rem;
+    border: 0.5px solid $theme-border;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all .3s;
+    color: $theme-deep-font;
+    outline: none;
+    &::-webkit-input-placeholder {
+        color: $theme-placeholder;
+    }
+    &:hover, &:focus {
+        border-color: $theme-primary;
+    }
+    &.disabled {
+        background-color: #F5F5F5;
+        cursor: not-allowed;
+        border-color: $theme-gray-disabled;
+    }
+    &-sm {
+        height: 0.28rem;
+    }
+    &-md {
+        height: 0.32rem;
+    }
+    &-lg {
+        height: 0.36rem;
+    }
+}

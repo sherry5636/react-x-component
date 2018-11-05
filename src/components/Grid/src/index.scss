@@ -1,0 +1,274 @@
+.x-icon {
+    font-family: "cicons" !important;
+    font-style: normal;
+
+    -webkit-font-smoothing: antialiased;
+}
+/* csshint-disable require-number disallow-important shorthand vendor-prefixes-sort */
+/*
+ * REM单位基准
+ * 设置100px主要为了方便计算 在页面任意地方 1rem = 100px
+ * 关于为何不使用10px：PC chrome有12px最小字号限制，若使用10px会造成pc调试困难带来不必要的麻烦
+ * 变换规则：
+ * 1.屏幕宽度360px以下，按0.9倍缩小
+ */
+html {
+    font-size: 100px;
+}
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 90px !important;
+    }
+}
+/*
+ * 栅格基础框架
+ * author xxx
+ * 页面等分为12n，其中内容31，间距24，共(31+24)*12=660
+ * 1n = 1/12 xn = x/12 左右各留12/660 padding
+ * 最左&最右的padding采用c-row -12/660 margin 消除
+ * @ BUG
+ * 安卓QQ浏览器 X5内核(026008GPU-S)存在弹性盒子兼容性问题-对应浏览器版本6.0.0.1550
+ * 实验版X5内核(036006GPU)修复正常-对应浏览器版本2.2.0.60
+ * 因此舍弃弹性盒模型自动换行属性
+ */
+
+ .x-grid-row{
+     display: flex;
+ }
+.x-container {
+    width: auto;
+    margin: .08rem 0;
+    padding: .1rem .17rem .15rem;
+    border: 0 none;
+    font: 14px/24px Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #555;
+    background-color: #fff;
+}
+.x-container-tight {
+    width: auto;
+    padding: .1rem .17rem .15rem;
+    border: 0 none;
+    font: 14px/24px Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #555;
+    background-color: #fff;
+}
+.x-container-tile {
+    margin: 0;
+    padding: 0;
+}
+.x-flexbox,
+.x-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    width: auto;
+
+    -webkit-align-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-lines: single;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+}
+.x-row {
+    margin-right: -1.03092784%;
+    margin-left: -1.03092784%;
+}
+.x-row-tight {
+    margin-right: -1px;
+    margin-left: 0;
+}
+.x-row-tile {
+    position: relative;
+    margin: 0 -.17rem;
+}
+.x-row-tile .x-row {
+    padding: 0 .17rem;
+}
+.x-row-top {
+    position: relative;
+    margin-top: -.1rem;
+}
+.x-row-top .x-row:first-child {
+    padding-top: .1rem;
+}
+.x-row-bottom {
+    position: relative;
+    margin-bottom: -.15rem;
+}
+.x-row-bottom .x-row:last-child {
+    padding-bottom: .15rem;
+}
+.x-row *,
+.x-row-tile *,
+.x-row-top *,
+.x-row-bottom * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.x-span1,
+.x-span2,
+.x-span3,
+.x-span4,
+.x-span5,
+.x-span6,
+.x-span7,
+.x-span8,
+.x-span9,
+.x-span10,
+.x-span11,
+.x-span12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 1.03092784%;
+    padding-left: 1.03092784%;
+}
+.x-span1 {
+    width: 8.33333333%;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+}
+.x-span2 {
+    width: 16.66666667%;
+
+    -webkit-box-flex: 2;
+    -webkit-flex: 2 2 auto;
+}
+.x-span3 {
+    width: 25%;
+
+    -webkit-box-flex: 3;
+    -webkit-flex: 3 3 auto;
+}
+.x-span4 {
+    width: 33.33333333%;
+
+    -webkit-box-flex: 4;
+    -webkit-flex: 4 4 auto;
+}
+.x-span5 {
+    width: 41.66666667%;
+
+    -webkit-box-flex: 5;
+    -webkit-flex: 5 5 auto;
+}
+.x-span6 {
+    width: 50%;
+
+    -webkit-box-flex: 6;
+    -webkit-flex: 6 6 auto;
+}
+.x-span7 {
+    width: 58.33333333%;
+
+    -webkit-box-flex: 7;
+    -webkit-flex: 7 7 auto;
+}
+.x-span8 {
+    width: 66.66666667%;
+
+    -webkit-box-flex: 8;
+    -webkit-flex: 8 8 auto;
+}
+.x-span9 {
+    width: 75%;
+
+    -webkit-box-flex: 9;
+    -webkit-flex: 9 9 auto;
+}
+.x-span10 {
+    width: 83.33333333%;
+
+    -webkit-box-flex: 10;
+    -webkit-flex: 10 10 auto;
+}
+.x-span11 {
+    width: 91.66666667%;
+
+    -webkit-box-flex: 11;
+    -webkit-flex: 11 11 auto;
+}
+.x-span12 {
+    width: 100%;
+
+    -webkit-box-flex: 12;
+    -webkit-flex: 12 12 auto;
+}
+.x-span-middle {
+    display: -webkit-box;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display:         flex;
+            flex-direction: column;
+
+    -webkit-box-direction: normal;
+       -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+       -moz-box-orient: vertical;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+/*
+ * 按行截断 & 行分割线样式
+ * author xxx
+ * 1~5行截断，其中单行截断采用强制不换行方式实现
+ * @ BUG
+ * 多行截断box-orient:vertical;当超行截断时，末行line-height与box-height距离缺失
+ * 目前给所有多行截断样式增加margin-bottom值补足行距，但会导致文字不足未发生截断时过多补足(目前无解)
+ */
+.x-line-clamp2,
+.x-line-clamp3,
+.x-line-clamp4,
+.x-line-clamp5 {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: .05rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+
+    -webkit-box-orient: vertical;
+}
+.x-line-clamp2 {
+    -webkit-line-clamp: 2;
+}
+.x-line-clamp3 {
+    -webkit-line-clamp: 3;
+}
+.x-line-clamp4 {
+    -webkit-line-clamp: 4;
+}
+.x-line-clamp5 {
+    -webkit-line-clamp: 5;
+}
+.x-line-clamp1 {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.x-line-top {
+    border-top: 1px solid #eee;
+}
+.x-line-dotted-top {
+    border-top: 1px dotted #eee;
+}
+.x-line-bottom {
+    border-bottom: 1px solid #eee;
+}
+.x-line-dotted-bottom {
+    border-bottom: 1px dotted #eee;
+}

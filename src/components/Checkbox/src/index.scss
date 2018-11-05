@@ -1,0 +1,46 @@
+@import '../../../styles/color.scss';
+
+.x-checkbox{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: .12rem;
+    &.checked{
+        .x-checkbox-item{
+            border-color: $theme-primary;
+            &>i{
+                vertical-align: text-top;
+                color: $theme-primary;
+            }
+        }
+    }
+    &.disabled{
+        cursor: not-allowed;
+        .x-checkbox-item{
+            background-color: #F5F5F5;
+            border-color: #BBC1D3;
+            cursor: not-allowed;
+        }
+    }
+    &.inverse.checked{
+        .x-checkbox-item{
+            background-color: $theme-primary;
+            &>i{
+                vertical-align: text-top;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .x-checkbox-item{
+        display: block;
+        width: .12rem;
+        height: .12rem;
+        border: 1px solid #C0CCDA;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    .x-checkbox-label{
+        font-size: 14px;
+        padding: 0 8px;
+    }
+}
